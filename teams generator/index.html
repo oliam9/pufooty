@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <title>PickUp Football</title>
+  </head>
+  <body class="container bg-dark mt-1">
+    <div class="header">
+      <h2 class="mb-3">PickUp Football</h2>
+    </div>
+    <div class="content">
+      <!-- NEW GAME  -->
+      <div class="new-game">
+        <h4>Add New Game</h4>
+        <form action="" id="form" class="form">
+          <div class="inputs mb-1">
+            <label for="date">Date: </label>
+            <input type="date" id="date" />
+          </div>
+          <div class="inputs mb-1">
+            <label for="time">Time: </label>
+            <input type="time" name="" id="time" />
+          </div>
+          <div class="inputs mb-1">
+            <label for="location">Location: </label>
+            <input type="text" id="loc" />
+          </div>
+          <div class="inputs">
+            <label for="max-players">Max Players: </label>
+            <input
+              type="number"
+              id="max-players"
+              style="width: 50px"
+              min="0"
+              max="28"
+            />
+          </div>
+          <button
+            type="button"
+            id="btn-newgame"
+            class="btn-new-game"
+          >
+            Add New Game
+          </button>
+        </form>
+      </div>
+
+      <!--  UPCOMING GAMES -->
+
+      <div class="u-games" id="up-games"></div>
+
+      <!--  PLAYERS LIST -->
+
+      <div class="players-list">
+        <div class="pl-head">
+          <h4 class="pt-2 ps-3">Players List</h4>
+          <button class="btn-hide">Hide</button>
+        </div>
+        <input
+          type="text"
+          class="input-el hide-all"
+          placeholder="Enter player name"
+        />
+
+        <button
+          class="btn-add-player hide-all ms-4"
+          type="button"
+        >
+          Add player
+        </button>
+
+        <ol class="players"></ol>
+
+        <div class="btns hide-all">
+          <button
+            type="button"
+            class="btn-generate-teams mx-3"
+          >
+            Generate Teams
+          </button>
+          <button
+          type="button"
+          class="btn-reset"
+                >
+          RESET
+                </button>
+        </div>
+      </div>
+
+
+      <!--  TEAMSHEET -->
+
+      <div id="teamsheet" class="teams-sheet mb-4">
+        <h4 class="pt-3 pb-2">Teams Sheet</h4>
+        <div  class="container d-flex justify-content-around text-center mb-3">
+          <div  class="d-flex flex-column align-content-center">
+            <i class="fas fa-tshirt bteam team-color"></i>
+            <ul class="teamOne team-container"></ul>
+          </div>
+          <div class="d-flex flex-column align-content-center">
+            <i class="fas fa-tshirt wteam team-color"></i>
+            <ul class="teamTwo team-container"></ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- SCRIPTS -->
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+      ></script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+      ></script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+      ></script>
+      <script src="script.js"></script>
+  </body>
+</html>
